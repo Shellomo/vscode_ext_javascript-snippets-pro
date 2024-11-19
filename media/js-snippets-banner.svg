@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-640 -325 1380 650">
+    <!-- Dark background with subtle gradient -->
+    <defs>
+        <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#1e1e1e;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#2d2d2d;stop-opacity:1" />
+        </linearGradient>
+        
+        <!-- Decorative pattern -->
+        <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+            <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#ffffff10" stroke-width="1"/>
+        </pattern>
+    </defs>
+    
+    <!-- Background -->
+    <rect x="-640" y="-325" width="1380" height="650" fill="url(#bg-gradient)"/>
+    <rect x="-640" y="-325" width="1380" height="650" fill="url(#grid)"/>
+    
+    <!-- Main content group -->
+    <g>
+        <!-- JavaScript logo with snippet indicator -->
+        <g transform="translate(-200, 0)">
+            <!-- JS Square -->
+            <rect x="-60" y="-60" width="120" height="120" fill="#F0DB4F" rx="10"/>
+            <text x="0" y="20" font-family="Monaco, monospace" font-size="75" font-weight="bold" fill="#323330" text-anchor="middle">JS</text>
+            
+            <!-- Snippet indicator -->
+            <g transform="translate(70, 70)">
+                <rect x="-30" y="-30" width="60" height="60" fill="#2196F3" rx="8"/>
+                <text x="0" y="10" font-family="Monaco, monospace" font-size="32" fill="white" text-anchor="middle">{}</text>
+            </g>
+        </g>
+        
+        <!-- Text content -->
+        <g transform="translate(100, 0)">
+            <text x="0" y="-40" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="white">JavaScript Snippets Pro</text>
+            <text x="0" y="20" font-family="Arial, sans-serif" font-size="24" fill="#cccccc">Modern Snippet Manager for VS Code</text>
+            
+            <!-- Feature list -->
+            <g transform="translate(0, 80)">
+                <text font-family="Arial, sans-serif" font-size="20" fill="#999999">
+                    <tspan x="0" y="0">✨ Beautiful UI Browser</tspan>
+                    <tspan x="0" y="30">📝 50+ Ready-to-Use Snippets</tspan>
+                    <tspan x="0" y="60">🚀 Boost Your Productivity</tspan>
+                </text>
+            </g>
+        </g>
+        
+        <!-- Decorative elements -->
+        <g stroke="#F0DB4F" stroke-width="2" fill="none">
+            <path d="M-500,-200 L-450,-200 L-450,-150" opacity="0.3"/>
+            <path d="M500,200 L450,200 L450,150" opacity="0.3"/>
+        </g>
+    </g>
+</svg>

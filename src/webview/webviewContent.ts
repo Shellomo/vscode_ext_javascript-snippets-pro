@@ -1,6 +1,6 @@
-import { SnippetDictionary } from '../types';
-import { getStyles } from './styles';
-import { getScripts } from './scripts';
+import {SnippetDictionary} from "../types";
+import {getStyles} from "./styles";
+import {getScripts} from "./scripts";
 
 export function getWebviewContent(snippets: SnippetDictionary): string {
     return `<!DOCTYPE html>
@@ -15,8 +15,8 @@ export function getWebviewContent(snippets: SnippetDictionary): string {
     </head>
     <body>
         <div class="search-container">
-            <input type="text" id="searchInput" class="search-input" placeholder="Search snippets..." style="margin-right: 10px;">
-            <button class="button" onclick="toggleAddSnippetForm()">Add New Snippet</button>
+            <input type="text" id="searchInput" class="search-input" placeholder="Search snippets...">
+            <button class="button add-snippet-btn" onclick="toggleAddSnippetForm()">Add New Snippet</button>
         </div>
 
         <div id="addSnippetForm" class="add-snippet-form">

@@ -1,12 +1,29 @@
 {
-    "name": "javascript-snippets",
-    "displayName": "JavaScript Snippets",
-    "description": "Useful JavaScript code snippets with snippet browser",
+    "name": "js-snippets-pro",
+    "displayName": "JavaScript Snippets Pro",
+    "description": "✨ Modern JavaScript & ES6+ snippets with a beautiful UI browser. Boost your productivity with customizable, searchable code snippets.",
     "version": "0.0.1",
+    "publisher": "Shellomo",
+    "icon": "media/logo.png",
+    "galleryBanner": {
+        "color": "#1e1e1e",
+        "theme": "dark"
+    },
     "engines": {
         "vscode": "^1.85.0"
     },
-    "categories": ["Snippets"],
+    "categories": [
+        "Snippets",
+        "Programming Languages",
+        "Other"
+    ],
+    "keywords": [
+        "javascript",
+        "snippets",
+        "es6",
+        "productivity",
+        "code snippets"
+    ],
     "activationEvents": [],
     "main": "./out/extension.js",
     "contributes": {

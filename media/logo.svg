@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+    <!-- Background -->
+    <rect width="128" height="128" fill="#2D2D2D"/>
+    
+    <!-- JS text with code-like styling -->
+    <g transform="translate(64,64)">
+        <!-- Decorative circuit-like lines -->
+        <path d="M-40,-40 L-30,-40 L-30,-30 L-20,-30" stroke="#FDD835" fill="none" stroke-width="2"/>
+        <path d="M40,40 L30,40 L30,30 L20,30" stroke="#FDD835" fill="none" stroke-width="2"/>
+        
+        <!-- Main JS logo -->
+        <path d="M-25,-25 L25,-25 L25,25 L-25,25 Z" fill="#F0DB4F"/>
+        <text x="0" y="10" font-family="Monaco, monospace" font-size="32" font-weight="bold" fill="#323330" text-anchor="middle">JS</text>
+        
+        <!-- Snippet indicator -->
+        <g transform="translate(30,30)">
+            <rect x="-15" y="-15" width="30" height="30" fill="#2196F3" rx="4"/>
+            <text x="0" y="5" font-family="Monaco, monospace" font-size="16" fill="white" text-anchor="middle">{}</text>
+        </g>
+    </g>
+</svg>
