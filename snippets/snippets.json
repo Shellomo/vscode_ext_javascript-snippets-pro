@@ -8,40 +8,521 @@
         "category": "Debug",
         "tags": ["logging", "debug"]
     },
-    "React Function Component": {
-        "prefix": "rfc",
+    "Console Log Variable": {
+        "prefix": "clv",
         "body": [
-            "import React from 'react';",
-            "",
-            "interface ${1:ComponentName}Props {",
-            "  $2",
-            "}",
-            "",
-            "export const ${1:ComponentName}: React.FC<${1:ComponentName}Props> = (props) => {",
-            "  return (",
-            "    <div>",
-            "      $3",
-            "    </div>",
-            "  );",
+            "console.log('$1:', $1);"
+        ],
+        "description": "Console log with variable name",
+        "category": "Debug",
+        "tags": ["logging", "debug"]
+    },
+    "Async Function": {
+        "prefix": "afn",
+        "body": [
+            "async function $1($2) {",
+            "    $3",
+            "}"
+        ],
+        "description": "Create an async function",
+        "category": "Functions",
+        "tags": ["async", "function"]
+    },
+    "Arrow Function": {
+        "prefix": "af",
+        "body": [
+            "const $1 = ($2) => {",
+            "    $3",
             "};"
         ],
-        "description": "Create a React functional component with TypeScript",
-        "category": "React",
-        "framework": "React",
-        "tags": ["component", "typescript"]
+        "description": "Create an arrow function",
+        "category": "Functions",
+        "tags": ["arrow", "function"]
     },
-    "Jest Test": {
-        "prefix": "test",
+    "Try Catch": {
+        "prefix": "tc",
         "body": [
-            "describe('${1:test suite}', () => {",
-            "  test('${2:test case}', () => {",
-            "    $3",
-            "  });",
+            "try {",
+            "    $1",
+            "} catch (error) {",
+            "    console.error(error);",
+            "}"
+        ],
+        "description": "Try-catch block",
+        "category": "Error Handling",
+        "tags": ["error", "exception"]
+    },
+    "For Each": {
+        "prefix": "fe",
+        "body": [
+            "$1.forEach((item) => {",
+            "    $2",
             "});"
         ],
-        "description": "Create a Jest test suite",
-        "category": "Testing",
-        "framework": "Jest",
-        "tags": ["testing", "jest"]
+        "description": "Array forEach loop",
+        "category": "Loops",
+        "tags": ["array", "loop"]
+    },
+    "Map Array": {
+        "prefix": "map",
+        "body": [
+            "const $1 = $2.map((item) => {",
+            "    return $3;",
+            "});"
+        ],
+        "description": "Array map function",
+        "category": "Arrays",
+        "tags": ["array", "map"]
+    },
+    "Filter Array": {
+        "prefix": "filter",
+        "body": [
+            "const $1 = $2.filter((item) => {",
+            "    return $3;",
+            "});"
+        ],
+        "description": "Array filter function",
+        "category": "Arrays",
+        "tags": ["array", "filter"]
+    },
+    "Reduce Array": {
+        "prefix": "reduce",
+        "body": [
+            "const $1 = $2.reduce((acc, curr) => {",
+            "    return acc + curr;",
+            "}, $3);"
+        ],
+        "description": "Array reduce function",
+        "category": "Arrays",
+        "tags": ["array", "reduce"]
+    },
+    "Promise": {
+        "prefix": "prom",
+        "body": [
+            "return new Promise((resolve, reject) => {",
+            "    $1",
+            "});"
+        ],
+        "description": "Create a new Promise",
+        "category": "Async",
+        "tags": ["promise", "async"]
+    },
+    "Async Arrow Function": {
+        "prefix": "aaf",
+        "body": [
+            "const $1 = async ($2) => {",
+            "    $3",
+            "};"
+        ],
+        "description": "Create an async arrow function",
+        "category": "Functions",
+        "tags": ["async", "arrow", "function"]
+    },
+    "Import Statement": {
+        "prefix": "imp",
+        "body": [
+            "import { $2 } from '$1';"
+        ],
+        "description": "Import statement",
+        "category": "Modules",
+        "tags": ["import", "module"]
+    },
+    "Export Default": {
+        "prefix": "exd",
+        "body": [
+            "export default $1;"
+        ],
+        "description": "Export default statement",
+        "category": "Modules",
+        "tags": ["export", "module"]
+    },
+    "Export Named": {
+        "prefix": "exp",
+        "body": [
+            "export const $1 = $2;"
+        ],
+        "description": "Export named constant",
+        "category": "Modules",
+        "tags": ["export", "module"]
+    },
+    "Class Definition": {
+        "prefix": "cls",
+        "body": [
+            "class $1 {",
+            "    constructor($2) {",
+            "        $3",
+            "    }",
+            "}"
+        ],
+        "description": "Define a class",
+        "category": "Classes",
+        "tags": ["class", "oop"]
+    },
+    "Method Definition": {
+        "prefix": "met",
+        "body": [
+            "$1($2) {",
+            "    $3",
+            "}"
+        ],
+        "description": "Define a class method",
+        "category": "Classes",
+        "tags": ["method", "class"]
+    },
+    "Getter": {
+        "prefix": "get",
+        "body": [
+            "get $1() {",
+            "    return this.$2;",
+            "}"
+        ],
+        "description": "Define a getter",
+        "category": "Classes",
+        "tags": ["getter", "class"]
+    },
+    "Setter": {
+        "prefix": "set",
+        "body": [
+            "set $1(value) {",
+            "    this.$2 = value;",
+            "}"
+        ],
+        "description": "Define a setter",
+        "category": "Classes",
+        "tags": ["setter", "class"]
+    },
+    "Destructure Object": {
+        "prefix": "dob",
+        "body": [
+            "const { $2 } = $1;"
+        ],
+        "description": "Destructure object",
+        "category": "Objects",
+        "tags": ["destructuring", "object"]
+    },
+    "Destructure Array": {
+        "prefix": "dar",
+        "body": [
+            "const [ $2 ] = $1;"
+        ],
+        "description": "Destructure array",
+        "category": "Arrays",
+        "tags": ["destructuring", "array"]
+    },
+    "Set Timeout": {
+        "prefix": "sto",
+        "body": [
+            "setTimeout(() => {",
+            "    $2",
+            "}, $1);"
+        ],
+        "description": "Set timeout function",
+        "category": "Async",
+        "tags": ["timeout", "async"]
+    },
+    "Set Interval": {
+        "prefix": "sin",
+        "body": [
+            "setInterval(() => {",
+            "    $2",
+            "}, $1);"
+        ],
+        "description": "Set interval function",
+        "category": "Async",
+        "tags": ["interval", "async"]
+    },
+    "Event Listener": {
+        "prefix": "ael",
+        "body": [
+            "$1.addEventListener('$2', ($3) => {",
+            "    $4",
+            "});"
+        ],
+        "description": "Add event listener",
+        "category": "DOM",
+        "tags": ["event", "dom"]
+    },
+    "Query Selector": {
+        "prefix": "qs",
+        "body": [
+            "document.querySelector('$1');"
+        ],
+        "description": "Query selector",
+        "category": "DOM",
+        "tags": ["selector", "dom"]
+    },
+    "Query Selector All": {
+        "prefix": "qsa",
+        "body": [
+            "document.querySelectorAll('$1');"
+        ],
+        "description": "Query selector all",
+        "category": "DOM",
+        "tags": ["selector", "dom"]
+    },
+    "Create Element": {
+        "prefix": "cel",
+        "body": [
+            "const $1 = document.createElement('$2');"
+        ],
+        "description": "Create DOM element",
+        "category": "DOM",
+        "tags": ["element", "dom"]
+    },
+    "Local Storage Set": {
+        "prefix": "lss",
+        "body": [
+            "localStorage.setItem('$1', JSON.stringify($2));"
+        ],
+        "description": "Set local storage item",
+        "category": "Storage",
+        "tags": ["localStorage", "storage"]
+    },
+    "Local Storage Get": {
+        "prefix": "lsg",
+        "body": [
+            "JSON.parse(localStorage.getItem('$1'));"
+        ],
+        "description": "Get local storage item",
+        "category": "Storage",
+        "tags": ["localStorage", "storage"]
+    },
+    "Fetch Request": {
+        "prefix": "fet",
+        "body": [
+            "fetch('$1')",
+            "    .then(response => response.json())",
+            "    .then(data => {",
+            "        $2",
+            "    })",
+            "    .catch(error => console.error(error));"
+        ],
+        "description": "Fetch API request",
+        "category": "API",
+        "tags": ["fetch", "api"]
+    },
+    "Async Fetch": {
+        "prefix": "afet",
+        "body": [
+            "try {",
+            "    const response = await fetch('$1');",
+            "    const data = await response.json();",
+            "    $2",
+            "} catch (error) {",
+            "    console.error(error);",
+            "}"
+        ],
+        "description": "Async fetch request",
+        "category": "API",
+        "tags": ["fetch", "async"]
+    },
+    "Object Literal": {
+        "prefix": "obj",
+        "body": [
+            "const $1 = {",
+            "    $2: $3",
+            "};"
+        ],
+        "description": "Create object literal",
+        "category": "Objects",
+        "tags": ["object", "literal"]
+    },
+    "Switch Statement": {
+        "prefix": "sw",
+        "body": [
+            "switch ($1) {",
+            "    case $2:",
+            "        $3",
+            "        break;",
+            "    default:",
+            "        $4",
+            "}"
+        ],
+        "description": "Switch statement",
+        "category": "Control Flow",
+        "tags": ["switch", "control"]
+    },
+    "If Else": {
+        "prefix": "ife",
+        "body": [
+            "if ($1) {",
+            "    $2",
+            "} else {",
+            "    $3",
+            "}"
+        ],
+        "description": "If-else statement",
+        "category": "Control Flow",
+        "tags": ["if", "control"]
+    },
+    "Ternary Operator": {
+        "prefix": "ter",
+        "body": [
+            "$1 ? $2 : $3"
+        ],
+        "description": "Ternary operator",
+        "category": "Control Flow",
+        "tags": ["ternary", "operator"]
+    },
+    "Regular Expression": {
+        "prefix": "reg",
+        "body": [
+            "const $1 = /$2/g;"
+        ],
+        "description": "Regular expression",
+        "category": "Regex",
+        "tags": ["regex", "pattern"]
+    },
+    "Array Spread": {
+        "prefix": "spr",
+        "body": [
+            "[...$1]"
+        ],
+        "description": "Spread array",
+        "category": "Arrays",
+        "tags": ["spread", "array"]
+    },
+    "Object Spread": {
+        "prefix": "osp",
+        "body": [
+            "{ ...$1 }"
+        ],
+        "description": "Spread object",
+        "category": "Objects",
+        "tags": ["spread", "object"]
+    },
+    "Default Parameters": {
+        "prefix": "dfp",
+        "body": [
+            "function $1($2 = $3) {",
+            "    $4",
+            "}"
+        ],
+        "description": "Function with default parameters",
+        "category": "Functions",
+        "tags": ["parameters", "function"]
+    },
+    "Template Literal": {
+        "prefix": "tpl",
+        "body": [
+            "`${$1}`"
+        ],
+        "description": "Template literal",
+        "category": "Strings",
+        "tags": ["template", "string"]
+    },
+    "Rest Parameters": {
+        "prefix": "rp",
+        "body": [
+            "function $1(...$2) {",
+            "    $3",
+            "}"
+        ],
+        "description": "Function with rest parameters",
+        "category": "Functions",
+        "tags": ["rest", "parameters"]
+    },
+    "Class Extension": {
+        "prefix": "ext",
+        "body": [
+            "class $1 extends $2 {",
+            "    constructor($3) {",
+            "        super($3);",
+            "        $4",
+            "    }",
+            "}"
+        ],
+        "description": "Extend a class",
+        "category": "Classes",
+        "tags": ["class", "inheritance"]
+    },
+    "Module Export All": {
+        "prefix": "exa",
+        "body": [
+            "export * from '$1';"
+        ],
+        "description": "Export all from module",
+        "category": "Modules",
+        "tags": ["export", "module"]
+    },
+    "Promise All": {
+        "prefix": "pall",
+        "body": [
+            "Promise.all([$1])",
+            "    .then(results => {",
+            "        $2",
+            "    })",
+            "    .catch(error => console.error(error));"
+        ],
+        "description": "Promise.all",
+        "category": "Async",
+        "tags": ["promise", "async"]
+    },
+    "Date Now": {
+        "prefix": "dn",
+        "body": [
+            "Date.now()"
+        ],
+        "description": "Current timestamp",
+        "category": "Date",
+        "tags": ["date", "timestamp"]
+    },
+    "Math Random": {
+        "prefix": "mr",
+        "body": [
+            "Math.floor(Math.random() * $1)"
+        ],
+        "description": "Random number generator",
+        "category": "Math",
+        "tags": ["math", "random"]
+    },
+    "JSON Stringify": {
+        "prefix": "jstr",
+        "body": [
+            "JSON.stringify($1, null, 2)"
+        ],
+        "description": "JSON stringify with formatting",
+        "category": "JSON",
+        "tags": ["json", "stringify"]
+    },
+    "JSON Parse": {
+        "prefix": "jpar",
+        "body": [
+            "JSON.parse($1)"
+        ],
+        "description": "JSON parse",
+        "category": "JSON",
+        "tags": ["json", "parse"]
+    },
+    "Debug Breakpoint": {
+        "prefix": "dbg",
+        "body": [
+            "debugger;"
+        ],
+        "description": "Add debugger statement",
+        "category": "Debug",
+        "tags": ["debug", "breakpoint"]
+    },
+    "Performance Measure": {
+        "prefix": "perf",
+        "body": [
+            "console.time('$1');",
+            "$2",
+            "console.timeEnd('$1');"
+        ],
+        "description": "Measure performance",
+        "category": "Debug",
+        "tags": ["performance", "debug"]
+    },
+    "Function Generator": {
+        "prefix": "gen",
+        "body": [
+            "function* $1($2) {",
+            "    $3",
+            "}"
+        ],
+        "description": "Function generator",
+        "category": "Functions",
+        "tags": ["generator", "function"]
     }
 }
