@@ -1,0 +1,37 @@
+{
+    "name": "javascript-snippets",
+    "displayName": "JavaScript Snippets",
+    "description": "Useful JavaScript code snippets with snippet browser",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.85.0"
+    },
+    "categories": ["Snippets"],
+    "activationEvents": [],
+    "main": "./out/extension.js",
+    "contributes": {
+        "commands": [{
+            "command": "javascript-snippets.showSnippets",
+            "title": "Show JavaScript Snippets"
+        }],
+        "snippets": [{
+            "language": "javascript",
+            "path": "./snippets/snippets.json"
+        }]
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "lint": "eslint src --ext ts",
+        "pretest": "npm run compile && npm run lint"
+    },
+    "devDependencies": {
+        "@types/vscode": "^1.85.0",
+        "@types/node": "^20.x",
+        "@typescript-eslint/eslint-plugin": "^6.13.1",
+        "@typescript-eslint/parser": "^6.13.1",
+        "eslint": "^8.54.0",
+        "typescript": "^5.3.2"
+    }
+}
