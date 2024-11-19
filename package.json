@@ -5,6 +5,8 @@
     "version": "0.0.1",
     "publisher": "Shellomo",
     "icon": "media/logo.png",
+    "license": "MIT",
+    "repository": "https://github.com/Shellomo/vscode_ext_javascript-snippets-pro",
     "galleryBanner": {
         "color": "#1e1e1e",
         "theme": "dark"

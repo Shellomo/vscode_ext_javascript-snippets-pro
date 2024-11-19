@@ -72,9 +72,9 @@ async function name(params) {
 
 ## Contributing 🤝
 
-Found a bug or have a feature request? [Open an issue](https://github.com/your-username/js-snippets-pro/issues)!
+Found a bug or have a feature request? [Open an issue](https://github.com/Shellomo/vscode_ext_javascript-snippets-pro/issues)!
 
-Want to contribute? [Check out our guidelines](https://github.com/your-username/js-snippets-pro/blob/main/CONTRIBUTING.md)
+Want to contribute? [Fork the repository](https://github.com/Shellomo/vscode_ext_javascript-snippets-pro) and submit a pull request.
 
 ## Release Notes 📋
 
@@ -87,7 +87,7 @@ Want to contribute? [Check out our guidelines](https://github.com/your-username/
 
 ## Support 💪
 
-Like this extension? [Rate it on the marketplace](https://marketplace.visualstudio.com/items?itemName=your-publisher-name.js-snippets-pro)!
+Like this extension? [Rate it on the marketplace](https://marketplace.visualstudio.com/items?itemName=Shellomo.js-snippets-pro)!
 
 ---
 
