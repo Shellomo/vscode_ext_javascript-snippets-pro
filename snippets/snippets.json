@@ -1,44 +1,4 @@
 {
-    "Console Log": {
-        "prefix": "cl",
-        "body": [
-            "console.log($1);"
-        ],
-        "description": "Console log statement",
-        "category": "Debug",
-        "tags": ["logging", "debug"]
-    },
-    "Console Log Variable": {
-        "prefix": "clv",
-        "body": [
-            "console.log('$1:', $1);"
-        ],
-        "description": "Console log with variable name",
-        "category": "Debug",
-        "tags": ["logging", "debug"]
-    },
-    "Async Function": {
-        "prefix": "afn",
-        "body": [
-            "async function $1($2) {",
-            "    $3",
-            "}"
-        ],
-        "description": "Create an async function",
-        "category": "Functions",
-        "tags": ["async", "function"]
-    },
-    "Arrow Function": {
-        "prefix": "af",
-        "body": [
-            "const $1 = ($2) => {",
-            "    $3",
-            "};"
-        ],
-        "description": "Create an arrow function",
-        "category": "Functions",
-        "tags": ["arrow", "function"]
-    },
     "Try Catch": {
         "prefix": "tc",
         "body": [
@@ -50,7 +10,10 @@
         ],
         "description": "Try-catch block",
         "category": "Error Handling",
-        "tags": ["error", "exception"]
+        "tags": [
+            "error",
+            "exception"
+        ]
     },
     "For Each": {
         "prefix": "fe",
@@ -61,7 +24,10 @@
         ],
         "description": "Array forEach loop",
         "category": "Loops",
-        "tags": ["array", "loop"]
+        "tags": [
+            "array",
+            "loop"
+        ]
     },
     "Map Array": {
         "prefix": "map",
@@ -72,7 +38,10 @@
         ],
         "description": "Array map function",
         "category": "Arrays",
-        "tags": ["array", "map"]
+        "tags": [
+            "array",
+            "map"
+        ]
     },
     "Filter Array": {
         "prefix": "filter",
@@ -83,7 +52,10 @@
         ],
         "description": "Array filter function",
         "category": "Arrays",
-        "tags": ["array", "filter"]
+        "tags": [
+            "array",
+            "filter"
+        ]
     },
     "Reduce Array": {
         "prefix": "reduce",
@@ -94,7 +66,10 @@
         ],
         "description": "Array reduce function",
         "category": "Arrays",
-        "tags": ["array", "reduce"]
+        "tags": [
+            "array",
+            "reduce"
+        ]
     },
     "Promise": {
         "prefix": "prom",
@@ -105,7 +80,10 @@
         ],
         "description": "Create a new Promise",
         "category": "Async",
-        "tags": ["promise", "async"]
+        "tags": [
+            "promise",
+            "async"
+        ]
     },
     "Async Arrow Function": {
         "prefix": "aaf",
@@ -116,7 +94,11 @@
         ],
         "description": "Create an async arrow function",
         "category": "Functions",
-        "tags": ["async", "arrow", "function"]
+        "tags": [
+            "async",
+            "arrow",
+            "function"
+        ]
     },
     "Import Statement": {
         "prefix": "imp",
@@ -125,7 +107,10 @@
         ],
         "description": "Import statement",
         "category": "Modules",
-        "tags": ["import", "module"]
+        "tags": [
+            "import",
+            "module"
+        ]
     },
     "Export Default": {
         "prefix": "exd",
@@ -134,7 +119,10 @@
         ],
         "description": "Export default statement",
         "category": "Modules",
-        "tags": ["export", "module"]
+        "tags": [
+            "export",
+            "module"
+        ]
     },
     "Export Named": {
         "prefix": "exp",
@@ -143,7 +131,10 @@
         ],
         "description": "Export named constant",
         "category": "Modules",
-        "tags": ["export", "module"]
+        "tags": [
+            "export",
+            "module"
+        ]
     },
     "Class Definition": {
         "prefix": "cls",
@@ -156,7 +147,10 @@
         ],
         "description": "Define a class",
         "category": "Classes",
-        "tags": ["class", "oop"]
+        "tags": [
+            "class",
+            "oop"
+        ]
     },
     "Method Definition": {
         "prefix": "met",
@@ -167,7 +161,10 @@
         ],
         "description": "Define a class method",
         "category": "Classes",
-        "tags": ["method", "class"]
+        "tags": [
+            "method",
+            "class"
+        ]
     },
     "Getter": {
         "prefix": "get",
@@ -178,7 +175,10 @@
         ],
         "description": "Define a getter",
         "category": "Classes",
-        "tags": ["getter", "class"]
+        "tags": [
+            "getter",
+            "class"
+        ]
     },
     "Setter": {
         "prefix": "set",
@@ -189,7 +189,10 @@
         ],
         "description": "Define a setter",
         "category": "Classes",
-        "tags": ["setter", "class"]
+        "tags": [
+            "setter",
+            "class"
+        ]
     },
     "Destructure Object": {
         "prefix": "dob",
@@ -198,7 +201,10 @@
         ],
         "description": "Destructure object",
         "category": "Objects",
-        "tags": ["destructuring", "object"]
+        "tags": [
+            "destructuring",
+            "object"
+        ]
     },
     "Destructure Array": {
         "prefix": "dar",
@@ -207,7 +213,10 @@
         ],
         "description": "Destructure array",
         "category": "Arrays",
-        "tags": ["destructuring", "array"]
+        "tags": [
+            "destructuring",
+            "array"
+        ]
     },
     "Set Timeout": {
         "prefix": "sto",
@@ -218,7 +227,10 @@
         ],
         "description": "Set timeout function",
         "category": "Async",
-        "tags": ["timeout", "async"]
+        "tags": [
+            "timeout",
+            "async"
+        ]
     },
     "Set Interval": {
         "prefix": "sin",
@@ -229,7 +241,10 @@
         ],
         "description": "Set interval function",
         "category": "Async",
-        "tags": ["interval", "async"]
+        "tags": [
+            "interval",
+            "async"
+        ]
     },
     "Event Listener": {
         "prefix": "ael",
@@ -240,7 +255,10 @@
         ],
         "description": "Add event listener",
         "category": "DOM",
-        "tags": ["event", "dom"]
+        "tags": [
+            "event",
+            "dom"
+        ]
     },
     "Query Selector": {
         "prefix": "qs",
@@ -249,7 +267,10 @@
         ],
         "description": "Query selector",
         "category": "DOM",
-        "tags": ["selector", "dom"]
+        "tags": [
+            "selector",
+            "dom"
+        ]
     },
     "Query Selector All": {
         "prefix": "qsa",
@@ -258,7 +279,10 @@
         ],
         "description": "Query selector all",
         "category": "DOM",
-        "tags": ["selector", "dom"]
+        "tags": [
+            "selector",
+            "dom"
+        ]
     },
     "Create Element": {
         "prefix": "cel",
@@ -267,7 +291,10 @@
         ],
         "description": "Create DOM element",
         "category": "DOM",
-        "tags": ["element", "dom"]
+        "tags": [
+            "element",
+            "dom"
+        ]
     },
     "Local Storage Set": {
         "prefix": "lss",
@@ -276,7 +303,10 @@
         ],
         "description": "Set local storage item",
         "category": "Storage",
-        "tags": ["localStorage", "storage"]
+        "tags": [
+            "localStorage",
+            "storage"
+        ]
     },
     "Local Storage Get": {
         "prefix": "lsg",
@@ -285,7 +315,10 @@
         ],
         "description": "Get local storage item",
         "category": "Storage",
-        "tags": ["localStorage", "storage"]
+        "tags": [
+            "localStorage",
+            "storage"
+        ]
     },
     "Fetch Request": {
         "prefix": "fet",
@@ -299,7 +332,10 @@
         ],
         "description": "Fetch API request",
         "category": "API",
-        "tags": ["fetch", "api"]
+        "tags": [
+            "fetch",
+            "api"
+        ]
     },
     "Async Fetch": {
         "prefix": "afet",
@@ -314,7 +350,10 @@
         ],
         "description": "Async fetch request",
         "category": "API",
-        "tags": ["fetch", "async"]
+        "tags": [
+            "fetch",
+            "async"
+        ]
     },
     "Object Literal": {
         "prefix": "obj",
@@ -325,7 +364,10 @@
         ],
         "description": "Create object literal",
         "category": "Objects",
-        "tags": ["object", "literal"]
+        "tags": [
+            "object",
+            "literal"
+        ]
     },
     "Switch Statement": {
         "prefix": "sw",
@@ -340,7 +382,10 @@
         ],
         "description": "Switch statement",
         "category": "Control Flow",
-        "tags": ["switch", "control"]
+        "tags": [
+            "switch",
+            "control"
+        ]
     },
     "If Else": {
         "prefix": "ife",
@@ -353,7 +398,10 @@
         ],
         "description": "If-else statement",
         "category": "Control Flow",
-        "tags": ["if", "control"]
+        "tags": [
+            "if",
+            "control"
+        ]
     },
     "Ternary Operator": {
         "prefix": "ter",
@@ -362,7 +410,10 @@
         ],
         "description": "Ternary operator",
         "category": "Control Flow",
-        "tags": ["ternary", "operator"]
+        "tags": [
+            "ternary",
+            "operator"
+        ]
     },
     "Regular Expression": {
         "prefix": "reg",
@@ -371,7 +422,10 @@
         ],
         "description": "Regular expression",
         "category": "Regex",
-        "tags": ["regex", "pattern"]
+        "tags": [
+            "regex",
+            "pattern"
+        ]
     },
     "Array Spread": {
         "prefix": "spr",
@@ -380,7 +434,10 @@
         ],
         "description": "Spread array",
         "category": "Arrays",
-        "tags": ["spread", "array"]
+        "tags": [
+            "spread",
+            "array"
+        ]
     },
     "Object Spread": {
         "prefix": "osp",
@@ -389,7 +446,10 @@
         ],
         "description": "Spread object",
         "category": "Objects",
-        "tags": ["spread", "object"]
+        "tags": [
+            "spread",
+            "object"
+        ]
     },
     "Default Parameters": {
         "prefix": "dfp",
@@ -400,7 +460,10 @@
         ],
         "description": "Function with default parameters",
         "category": "Functions",
-        "tags": ["parameters", "function"]
+        "tags": [
+            "parameters",
+            "function"
+        ]
     },
     "Template Literal": {
         "prefix": "tpl",
@@ -409,7 +472,10 @@
         ],
         "description": "Template literal",
         "category": "Strings",
-        "tags": ["template", "string"]
+        "tags": [
+            "template",
+            "string"
+        ]
     },
     "Rest Parameters": {
         "prefix": "rp",
@@ -420,7 +486,10 @@
         ],
         "description": "Function with rest parameters",
         "category": "Functions",
-        "tags": ["rest", "parameters"]
+        "tags": [
+            "rest",
+            "parameters"
+        ]
     },
     "Class Extension": {
         "prefix": "ext",
@@ -434,7 +503,10 @@
         ],
         "description": "Extend a class",
         "category": "Classes",
-        "tags": ["class", "inheritance"]
+        "tags": [
+            "class",
+            "inheritance"
+        ]
     },
     "Module Export All": {
         "prefix": "exa",
@@ -443,7 +515,10 @@
         ],
         "description": "Export all from module",
         "category": "Modules",
-        "tags": ["export", "module"]
+        "tags": [
+            "export",
+            "module"
+        ]
     },
     "Promise All": {
         "prefix": "pall",
@@ -456,7 +531,10 @@
         ],
         "description": "Promise.all",
         "category": "Async",
-        "tags": ["promise", "async"]
+        "tags": [
+            "promise",
+            "async"
+        ]
     },
     "Date Now": {
         "prefix": "dn",
@@ -465,7 +543,10 @@
         ],
         "description": "Current timestamp",
         "category": "Date",
-        "tags": ["date", "timestamp"]
+        "tags": [
+            "date",
+            "timestamp"
+        ]
     },
     "Math Random": {
         "prefix": "mr",
@@ -474,7 +555,10 @@
         ],
         "description": "Random number generator",
         "category": "Math",
-        "tags": ["math", "random"]
+        "tags": [
+            "math",
+            "random"
+        ]
     },
     "JSON Stringify": {
         "prefix": "jstr",
@@ -483,7 +567,10 @@
         ],
         "description": "JSON stringify with formatting",
         "category": "JSON",
-        "tags": ["json", "stringify"]
+        "tags": [
+            "json",
+            "stringify"
+        ]
     },
     "JSON Parse": {
         "prefix": "jpar",
@@ -492,7 +579,10 @@
         ],
         "description": "JSON parse",
         "category": "JSON",
-        "tags": ["json", "parse"]
+        "tags": [
+            "json",
+            "parse"
+        ]
     },
     "Debug Breakpoint": {
         "prefix": "dbg",
@@ -501,7 +591,10 @@
         ],
         "description": "Add debugger statement",
         "category": "Debug",
-        "tags": ["debug", "breakpoint"]
+        "tags": [
+            "debug",
+            "breakpoint"
+        ]
     },
     "Performance Measure": {
         "prefix": "perf",
@@ -512,7 +605,10 @@
         ],
         "description": "Measure performance",
         "category": "Debug",
-        "tags": ["performance", "debug"]
+        "tags": [
+            "performance",
+            "debug"
+        ]
     },
     "Function Generator": {
         "prefix": "gen",
@@ -523,6 +619,23 @@
         ],
         "description": "Function generator",
         "category": "Functions",
-        "tags": ["generator", "function"]
+        "tags": [
+            "generator",
+            "function"
+        ]
+    },
+    "cl": {
+        "prefix": "cl",
+        "description": "Console log statement",
+        "body": [
+            "console.log($1);ddf"
+        ]
+    },
+    "clvsds": {
+        "prefix": "clvsds",
+        "description": "Console log with variable name",
+        "body": [
+            "console.log('$1:', $1);"
+        ]
     }
 }

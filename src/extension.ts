@@ -1,26 +1,17 @@
 import * as vscode from 'vscode';
 import * as fs from 'fs';
 import * as path from 'path';
-
-interface Snippet {
-    prefix: string;
-    body: string[];
-    description: string;
-}
-
-interface SnippetDictionary {
-    [key: string]: Snippet;
-}
+import { SnippetWebviewPanel } from './SnippetWebviewPanel';
+import { Snippet, SnippetDictionary } from './types';
 
 export function activate(context: vscode.ExtensionContext) {
-    let disposable = vscode.commands.registerCommand('javascript-snippets.showSnippets', async () => {
+    // Register the original quickpick command
+    let quickPickDisposable = vscode.commands.registerCommand('javascript-snippets.showSnippets', async () => {
         try {
-            // Read snippets file
             const snippetsPath = path.join(context.extensionPath, 'snippets', 'snippets.json');
             const snippetsContent = fs.readFileSync(snippetsPath, 'utf8');
             const snippets: SnippetDictionary = JSON.parse(snippetsContent);
 
-            // Create QuickPick items from snippets
             const items = Object.entries(snippets).map(([name, snippet]) => ({
                 label: `${snippet.prefix}: ${name}`,
                 description: snippet.description,
@@ -28,7 +19,6 @@ export function activate(context: vscode.ExtensionContext) {
                 snippet: snippet
             }));
 
-            // Show QuickPick
             const selected = await vscode.window.showQuickPick(items, {
                 matchOnDescription: true,
                 matchOnDetail: true,
@@ -38,7 +28,6 @@ export function activate(context: vscode.ExtensionContext) {
             if (selected) {
                 const editor = vscode.window.activeTextEditor;
                 if (editor) {
-                    // Insert the selected snippet
                     const snippet = new vscode.SnippetString(selected.snippet.body.join('\n'));
                     await editor.insertSnippet(snippet);
                 }
@@ -48,7 +37,12 @@ export function activate(context: vscode.ExtensionContext) {
         }
     });
 
-    context.subscriptions.push(disposable);
+    // Register the webview command
+    let webviewDisposable = vscode.commands.registerCommand('javascript-snippets.showSnippetsWebview', () => {
+        SnippetWebviewPanel.createOrShow(context.extensionPath);
+    });
+
+    context.subscriptions.push(quickPickDisposable, webviewDisposable);
 }
 
 export function deactivate() {}

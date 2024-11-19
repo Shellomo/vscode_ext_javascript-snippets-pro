@@ -10,10 +10,16 @@
     "activationEvents": [],
     "main": "./out/extension.js",
     "contributes": {
-        "commands": [{
-            "command": "javascript-snippets.showSnippets",
-            "title": "Show JavaScript Snippets"
-        }],
+        "commands": [
+            {
+                "command": "javascript-snippets.showSnippets",
+                "title": "Show JavaScript Snippets (Quick Pick)"
+            },
+            {
+                "command": "javascript-snippets.showSnippetsWebview",
+                "title": "Show JavaScript Snippets (Browser)"
+            }
+        ],
         "snippets": [{
             "language": "javascript",
             "path": "./snippets/snippets.json"
