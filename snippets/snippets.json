@@ -648,41 +648,5 @@
         "body": [
             "console.log('$1:', $1);"
         ]
-    },
-    "dscdc": {
-        "prefix": "dscdc",
-        "description": "dsc",
-        "body": [
-            "asdcv",
-            "asdc",
-            "asdcasdcv",
-            ""
-        ]
-    },
-    "sdc": {
-        "prefix": "sdc",
-        "description": "sdcsdc",
-        "body": [
-            "asdc",
-            "asdc",
-            "asdc"
-        ]
-    },
-    "abc": {
-        "prefix": "abc",
-        "description": "abc",
-        "body": [
-            "asdc",
-            "asdcasdc",
-            "asdcasd",
-            "asdc"
-        ]
-    },
-    "adw": {
-        "prefix": "adw",
-        "description": "adsc",
-        "body": [
-            "asdfadsfc"
-        ]
     }
 }
