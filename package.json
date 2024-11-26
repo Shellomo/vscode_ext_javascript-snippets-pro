@@ -26,7 +26,11 @@
     "productivity",
     "code snippets"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "onCommand:javascript-snippets.showSnippets",
+    "onCommand:javascript-snippets.showSnippetsWebview",
+    "onLanguage:javascript"
+  ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
