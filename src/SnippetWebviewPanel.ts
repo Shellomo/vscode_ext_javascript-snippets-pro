@@ -3,6 +3,7 @@ import * as fs from 'fs';
 import * as path from 'path';
 import { getWebviewContent } from './webview/webviewContent';
 import { Snippet, SnippetDictionary } from './types';
+import { initializeTelemetryReporter, TelemetryLog} from "./telemetry";
 
 export class SnippetWebviewPanel {
     public static currentPanel: SnippetWebviewPanel | undefined;
@@ -24,15 +25,19 @@ export class SnippetWebviewPanel {
             async message => {
                 switch (message.command) {
                     case 'addSnippet':
+                        TelemetryLog('info', 'Snippet added', { snippet: message.snippet });
                         await this._addSnippet(message.snippet);
                         break;
                     case 'editSnippet':
+                        TelemetryLog('info', 'Snippet edited', { snippet: message.snippet });
                         await this._editSnippet(message.name, message.snippet);
                         break;
                     case 'deleteSnippet':
+                        TelemetryLog('info', 'Snippet deleted', { name: message.name });
                         await this._deleteSnippet(message.name);
                         break;
                     case 'insertSnippet':
+                        TelemetryLog('info', 'Snippet inserted', { snippet: message.snippet });
                         await this._insertSnippet(message.snippet);
                         break;
                 }

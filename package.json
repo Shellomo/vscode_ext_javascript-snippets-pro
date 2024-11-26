@@ -1,62 +1,67 @@
 {
-    "name": "js-snippets-pro",
-    "displayName": "JavaScript Snippets Pro",
-    "description": "✨ Modern JavaScript & ES6+ snippets with a beautiful UI browser. Boost your productivity with customizable, searchable code snippets.",
-    "version": "1.0.2",
-    "publisher": "Shellomo",
-    "icon": "media/logo.png",
-    "license": "MIT",
-    "repository": "https://github.com/Shellomo/vscode_ext_javascript-snippets-pro",
-    "galleryBanner": {
-        "color": "#1e1e1e",
-        "theme": "dark"
-    },
-    "engines": {
-        "vscode": "^1.85.0"
-    },
-    "categories": [
-        "Snippets",
-        "Programming Languages",
-        "Other"
+  "name": "js-snippets-pro",
+  "displayName": "JavaScript Snippets Pro",
+  "description": "✨ Modern JavaScript & ES6+ snippets with a beautiful UI browser. Boost your productivity with customizable, searchable code snippets.",
+  "version": "1.0.3",
+  "publisher": "Shellomo",
+  "icon": "media/logo.png",
+  "license": "MIT",
+  "repository": "https://github.com/Shellomo/vscode_ext_javascript-snippets-pro",
+  "galleryBanner": {
+    "color": "#1e1e1e",
+    "theme": "dark"
+  },
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Snippets",
+    "Programming Languages",
+    "Other"
+  ],
+  "keywords": [
+    "javascript",
+    "snippets",
+    "es6",
+    "productivity",
+    "code snippets"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "javascript-snippets.showSnippets",
+        "title": "Show JavaScript Snippets (Quick Pick)"
+      },
+      {
+        "command": "javascript-snippets.showSnippetsWebview",
+        "title": "Show JavaScript Snippets (Browser)"
+      }
     ],
-    "keywords": [
-        "javascript",
-        "snippets",
-        "es6",
-        "productivity",
-        "code snippets"
-    ],
-    "activationEvents": [],
-    "main": "./out/extension.js",
-    "contributes": {
-        "commands": [
-            {
-                "command": "javascript-snippets.showSnippets",
-                "title": "Show JavaScript Snippets (Quick Pick)"
-            },
-            {
-                "command": "javascript-snippets.showSnippetsWebview",
-                "title": "Show JavaScript Snippets (Browser)"
-            }
-        ],
-        "snippets": [{
-            "language": "javascript",
-            "path": "./snippets/snippets.json"
-        }]
-    },
-    "scripts": {
-        "vscode:prepublish": "npm run compile",
-        "compile": "tsc -p ./",
-        "watch": "tsc -watch -p ./",
-        "lint": "eslint src --ext ts",
-        "pretest": "npm run compile && npm run lint"
-    },
-    "devDependencies": {
-        "@types/vscode": "^1.85.0",
-        "@types/node": "^20.x",
-        "@typescript-eslint/eslint-plugin": "^6.13.1",
-        "@typescript-eslint/parser": "^6.13.1",
-        "eslint": "^8.54.0",
-        "typescript": "^5.3.2"
-    }
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./snippets/snippets.json"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "lint": "eslint src --ext ts",
+    "pretest": "npm run compile && npm run lint"
+  },
+  "dependencies": {
+    "@vscode/extension-telemetry": "^0.9.8"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@types/node": "^20.x",
+    "@typescript-eslint/eslint-plugin": "^6.13.1",
+    "@typescript-eslint/parser": "^6.13.1",
+    "eslint": "^8.54.0",
+    "typescript": "^5.3.2"
+  }
 }
